@@ -22,7 +22,7 @@ class PointerDrawer {
       {double radius: 0, Paint paint}) {
     if (paint == null)
       paint = Paint()
-        ..color = Colors.yellow;
+        ..color = Colors.yellow;//Color.fromRGBO(13, 45, 132, 1);
     if (radius == 0) radius = canvasSize.width / 100;
     canvas.drawCircle(offset, radius, paint);
 
@@ -30,11 +30,11 @@ class PointerDrawer {
 
   void _drawDwellingArcBackground(Canvas canvas, double width) {
     final paintBack = Paint()
-    ..color = Colors.yellowAccent.withAlpha(80)
+    ..color = Color.fromRGBO(13, 45, 132, 1).withAlpha(200)//Colors.yellowAccent.withAlpha(80)
     ..strokeWidth = 1;
     _drawCircle(canvas, pointer.getPosition(), radius: width/2, paint: paintBack);
     final paint = Paint()
-      ..color = Colors.red
+      ..color = Colors.white70
       ..strokeWidth = 1;
     final c = pointer.getPosition();
     final top = Offset(c.dx, c.dy-width/2), bottom = Offset(c.dx, c.dy+width/2);
@@ -44,7 +44,7 @@ class PointerDrawer {
   }
 
   void _drawDwellingArc(Canvas canvas, double width) {
-    final paintStyle = Paint()..color = Colors.deepOrange.withAlpha(80);
+    final paintStyle = Paint()..color = Colors.white70;//Colors.deepOrange.withAlpha(80);
     var l =  pointer.getPosition().dx - width/2;
     var t =  pointer.getPosition().dy - width/2;
     canvas.drawArc(new Rect.fromLTWH(l, t, width, width),
@@ -66,7 +66,7 @@ class PointerDrawer {
 
   void _drawCircleEdge(Canvas canvas) {
     final paintStyle = Paint()
-      ..color = Colors.red
+      ..color = Colors.white10
       ..strokeWidth = 1.0
       ..style = PaintingStyle.stroke;
     final scale = pointer.getType() == PointerType.Bubble ? 20 : 10;

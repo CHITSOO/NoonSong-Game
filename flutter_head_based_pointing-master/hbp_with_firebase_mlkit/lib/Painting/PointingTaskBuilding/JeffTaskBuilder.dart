@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'PointingTaskBuilder.dart';
 import 'Target.dart';
 import 'dart:ui' as ui;
+import 'dart:math';
 
 class JeffTaskBuilder extends PointingTaskBuilder {
   var _jeffTaskWidth = 80.0;
@@ -17,12 +18,18 @@ class JeffTaskBuilder extends PointingTaskBuilder {
   //   targets.add(Target.fromCircle(Offset(size.width-e, size.height-e), width));
   // }
   void _createJeffTask(double width,{double e = 100}) { // e: edge
+    var rng = new Random();
     Size size = canvasSize; // Size(420, 690); // manually detected size
     targets.add(Target.fromNoonSong(image,Offset(e, e)));
     targets.add(Target.fromNoonSong(image,Offset(size.width-e, e)));
     targets.add(Target.fromNoonSong(image,Offset(size.width/2, size.height/2)));
     targets.add(Target.fromNoonSong(image,Offset(e, size.height-e)));
     targets.add(Target.fromNoonSong(image,Offset(size.width-e, size.height-e)));
+    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
+    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
+    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
+    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
+    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
   }
 
   JeffTaskBuilder(imageSize, pointer, this.image) :  super(imageSize, pointer) {

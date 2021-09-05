@@ -49,7 +49,7 @@ class DemoScreen {
   }
 
   Widget _drawFacialLandmarks() {
-    const Text noResultsText = const Text('No results!');
+    const Text noResultsText = const Text('waiting..');
     if (_faces == null || _cameraHandler.isCameraEmpty() || _faces is! List<Face>)
       return noResultsText;
     Size _imageSize = _cameraHandler.getCameraPreviewSize();

@@ -99,7 +99,10 @@ class CameraHandler {
     );
   }
 
-  CameraPreview getCameraPreview() {
-    return CameraPreview(_camera);
+  dynamic getCameraPreview() {
+    if(_camera == null)
+      return Container();
+    else
+      return CameraPreview(_camera);
   }
 }

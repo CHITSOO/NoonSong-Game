@@ -22,7 +22,7 @@ class FacePainter extends CustomPainter {
     }
     var g = (ratio * 255).toInt();
     final paintRectStyle = Paint()
-      ..color = Color.fromARGB(255,  255-g, g, 3)
+      ..color = Colors.transparent//Color.fromRGBO(13, 45, 132, 1)//Color.fromARGB(255,  255-g, g, 3)
       ..strokeWidth = 10.0
       ..style = PaintingStyle.stroke;
 
@@ -38,7 +38,7 @@ class FacePainter extends CustomPainter {
 
   void _addCircle(Canvas canvas, Offset offset, Size size,
       {double radius: 0, Paint paint}) {
-    if (paint == null) paint = Paint()..color = Colors.yellow;
+    if (paint == null) paint = Paint()..color = Colors.transparent;//Colors.white30;
     offset = flipOffsetBasedOnCam(offset, _direction, size.width);
     if (radius == 0) radius = size.width / 100;
     canvas.drawCircle(offset, radius, paint);
