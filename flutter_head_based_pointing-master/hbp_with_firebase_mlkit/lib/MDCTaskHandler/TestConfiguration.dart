@@ -1,5 +1,5 @@
-import 'package:HeadPointing/Painting/PointingTaskBuilding/PointingTaskBuilder.dart';
-import 'package:HeadPointing/pointer.dart';
+import 'package:NoonSongGame/Painting/PointingTaskBuilding/PointingTaskBuilder.dart';
+import 'package:NoonSongGame/pointer.dart';
 import 'dart:math' as math;
 
 class TestConfiguration {

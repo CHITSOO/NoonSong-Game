@@ -1,6 +1,6 @@
-import 'package:HeadPointing/Painting/PointingTaskBuilding/MDCTaskBuilder.dart';
-import 'package:HeadPointing/MDCTaskHandler/MDCTestBlock.dart';
-import 'package:HeadPointing/pointer.dart';
+import 'package:NoonSongGame/Painting/PointingTaskBuilding/MDCTaskBuilder.dart';
+import 'package:NoonSongGame/MDCTaskHandler/MDCTestBlock.dart';
+import 'package:NoonSongGame/pointer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 

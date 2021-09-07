@@ -1,8 +1,8 @@
-import 'package:HeadPointing/MDCTaskHandler/MDCTaskRecorder.dart';
+import 'package:NoonSongGame/MDCTaskHandler/MDCTaskRecorder.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
-import 'package:HeadPointing/Painting/face_painter.dart';
-import 'package:HeadPointing/CameraHandler.dart';
-import 'package:HeadPointing/pointer.dart';
+import 'package:NoonSongGame/Painting/face_painter.dart';
+import 'package:NoonSongGame/CameraHandler.dart';
+import 'package:NoonSongGame/pointer.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/material.dart';
 

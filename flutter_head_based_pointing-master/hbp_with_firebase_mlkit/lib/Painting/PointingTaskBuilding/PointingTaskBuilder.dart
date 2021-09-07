@@ -1,4 +1,4 @@
-import 'package:HeadPointing/pointer.dart';
+import 'package:NoonSongGame/pointer.dart';
 import 'package:flutter/material.dart';
 import 'Target.dart';
 

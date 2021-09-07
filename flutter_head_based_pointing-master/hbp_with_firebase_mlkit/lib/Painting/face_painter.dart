@@ -1,5 +1,5 @@
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
-import 'package:HeadPointing/utils.dart';
+import 'package:NoonSongGame/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 

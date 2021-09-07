@@ -1,5 +1,5 @@
-import 'package:HeadPointing/Painting/PointingTaskBuilding/Target.dart';
-import 'package:HeadPointing/pointer.dart';
+import 'package:NoonSongGame/Painting/PointingTaskBuilding/Target.dart';
+import 'package:NoonSongGame/pointer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 

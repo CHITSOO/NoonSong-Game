@@ -1,7 +1,7 @@
-import 'package:HeadPointing/Painting/PointingTaskBuilding/PointingTaskBuilder.dart';
-import 'package:HeadPointing/Painting/PointingTaskBuilding/JeffTaskBuilder.dart';
-import 'package:HeadPointing/Painting/PointingTaskBuilding/MDCTaskBuilder.dart';
-import 'package:HeadPointing/pointer.dart';
+import 'package:NoonSongGame/Painting/PointingTaskBuilding/PointingTaskBuilder.dart';
+import 'package:NoonSongGame/Painting/PointingTaskBuilding/JeffTaskBuilder.dart';
+import 'package:NoonSongGame/Painting/PointingTaskBuilding/MDCTaskBuilder.dart';
+import 'package:NoonSongGame/pointer.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'dart:ui' as ui;

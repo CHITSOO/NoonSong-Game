@@ -1,6 +1,6 @@
-import 'package:HeadPointing/MDCTaskHandler/TaskScreen.dart';
-import 'package:HeadPointing/CameraHandler.dart';
-import 'package:HeadPointing/MDCTaskHandler/ConfigScreen.dart';
+import 'package:NoonSongGame/MDCTaskHandler/TaskScreen.dart';
+import 'package:NoonSongGame/CameraHandler.dart';
+import 'package:NoonSongGame/MDCTaskHandler/ConfigScreen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';

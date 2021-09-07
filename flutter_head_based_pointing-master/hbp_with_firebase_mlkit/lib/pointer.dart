@@ -1,4 +1,4 @@
-import 'package:HeadPointing/Painting/PointerDrawer.dart';
+import 'package:NoonSongGame/Painting/PointerDrawer.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
 import 'HeadToCursorMapping.dart';

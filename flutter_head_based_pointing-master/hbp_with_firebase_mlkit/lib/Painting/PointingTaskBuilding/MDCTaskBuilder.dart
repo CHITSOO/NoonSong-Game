@@ -1,6 +1,6 @@
-import 'package:HeadPointing/Painting/PointingTaskBuilding/PointingTaskBuilder.dart';
-import 'package:HeadPointing/Painting/PointingTaskBuilding/Target.dart';
-import 'package:HeadPointing/MDCTaskHandler/MDCTestBlock.dart';
+import 'package:NoonSongGame/Painting/PointingTaskBuilding/PointingTaskBuilder.dart';
+import 'package:NoonSongGame/Painting/PointingTaskBuilding/Target.dart';
+import 'package:NoonSongGame/MDCTaskHandler/MDCTestBlock.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 

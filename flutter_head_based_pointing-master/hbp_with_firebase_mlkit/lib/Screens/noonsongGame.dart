@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:screen/screen.dart';
-import 'package:HeadPointing/Demo/DemoScreen.dart';
-import 'package:HeadPointing/CameraHandler.dart';
+import 'package:NoonSongGame/Demo/DemoScreen.dart';
+import 'package:NoonSongGame/CameraHandler.dart';
 import 'dart:ui' as ui;
 
 class NoonsongGame extends StatelessWidget {

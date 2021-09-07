@@ -1,8 +1,8 @@
-import 'package:HeadPointing/Painting/PointingTaskBuilding/PointingTaskBuilder.dart';
-import 'package:HeadPointing/MDCTaskHandler/TestConfiguration.dart';
+import 'package:NoonSongGame/Painting/PointingTaskBuilding/PointingTaskBuilder.dart';
+import 'package:NoonSongGame/MDCTaskHandler/TestConfiguration.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:HeadPointing/pointer.dart';
+import 'package:NoonSongGame/pointer.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
