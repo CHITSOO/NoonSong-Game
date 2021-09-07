@@ -20,17 +20,17 @@ class JeffTaskBuilder extends PointingTaskBuilder {
   void _createJeffTask(double width,{double e = 100}) { // e: edge
     var rng = new Random();
     Size size = canvasSize; // Size(420, 690); // manually detected size
+
     targets.add(Target.fromNoonSong(image,Offset(e, e)));
+    targets.add(Target.fromNoonSong(image,Offset(size.width-e*2, -e/1.5)));
+    targets.add(Target.fromNoonSong(image,Offset(-e/2, -e/2)));
     targets.add(Target.fromNoonSong(image,Offset(size.width-e, e)));
     targets.add(Target.fromNoonSong(image,Offset(size.width/2, size.height/2)));
     targets.add(Target.fromNoonSong(image,Offset(e, size.height-e)));
     targets.add(Target.fromNoonSong(image,Offset(size.width-e, size.height-e)));
-    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
-    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
-    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
-    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
-    targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
-  }
+    //targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
+    //targets.add(Target.fromNoonSong(image,Offset(rng.nextInt(400).toDouble(), rng.nextInt(600).toDouble())));
+    }
 
   JeffTaskBuilder(imageSize, pointer, this.image) :  super(imageSize, pointer) {
       _createJeffTask(_jeffTaskWidth, e: _jeffTaskEdge);

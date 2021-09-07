@@ -7,16 +7,12 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
     MaterialApp(
-      title: 'Named Routes Demo',
+      title: 'NoonSong Game',
       debugShowCheckedModeBanner: false,
       //home: SignInPage(),
       initialRoute: '/',
       routes: {
-        '/': (context) => MySplashScreen(),
-        '/h': (context) => NoonsongHomepage(),
-        '/u': (context) => SignUpPage(),
-        '/i': (context) => SignInPage(),
-        '/g': (context) => NoonsongGame(),
+        '/': (context) => NoonsongGame(),
       },
     )
 );
