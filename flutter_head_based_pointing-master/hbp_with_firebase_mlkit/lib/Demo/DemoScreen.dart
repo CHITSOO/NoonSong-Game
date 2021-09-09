@@ -1,3 +1,4 @@
+import 'package:NoonSongGame/Demo/WaitingScreen.dart';
 import 'package:NoonSongGame/Painting/PointingTaskBuilding/JeffTaskBuilder.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:NoonSongGame/Painting/face_painter.dart';
@@ -51,7 +52,7 @@ class DemoScreen {
   Widget _drawFacialLandmarks() {
     const Text noResultsText = const Text('waiting..');
     if (_faces == null || _cameraHandler.isCameraEmpty() || _faces is! List<Face>)
-      return noResultsText;
+      return waitingScreen();
     Size _imageSize = _cameraHandler.getCameraPreviewSize();
     var direction = _cameraHandler.getDirection();
     CustomPainter painter = FacePainter(_imageSize, _faces, direction);

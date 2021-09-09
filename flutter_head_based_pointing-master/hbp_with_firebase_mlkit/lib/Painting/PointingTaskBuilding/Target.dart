@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 enum TargetShape {
   RectTarget,
   CircleTarget,
-  NoonSongTarget, // 추가 1
+  NoonSongTarget,
 }
 
 class Target {
@@ -105,14 +105,11 @@ class Target {
 
   void draw(Canvas canvas, pointer, {pointerRadius}) {
     _updateState(pointer);
-    if (this.pressed)//이 pressed의 의미는 뭘까..
-      //_style.color = Colors.blue;//마음에 걸림. image속성 뭐가 있는지 보자..
+    if (this.pressed)
       _style.imageFilter = ui.ImageFilter.blur(sigmaX: .0, sigmaY: .0);
     else
-      //_style.color = Colors.lightGreen;
       _style.imageFilter = ui.ImageFilter.blur(sigmaX: .5, sigmaY: .5);
     if (!_switched && highlighted)
-      //_style.color = Colors.grey;
       _style.imageFilter = ui.ImageFilter.blur(sigmaX: .9, sigmaY: .9);
     if (_targetShape == TargetShape.RectTarget)
       canvas.drawRect(_shape, _style);

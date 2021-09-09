@@ -8,7 +8,6 @@ import 'package:NoonSongGame/CameraHandler.dart';
 import 'dart:ui' as ui;
 
 class NoonsongGame extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
@@ -19,13 +18,11 @@ class NoonsongGame extends StatelessWidget {
         theme: ThemeData(
           primaryColor: Color.fromRGBO(13, 45, 132, 1),
         ),
-        home: GameStart()
-    );
+        home: GameStart());
   }
 }
 
 class GameStart extends StatefulWidget {
-
   @override
   _GameStartState createState() => _GameStartState();
 }
@@ -51,21 +48,82 @@ class _GameStartState extends State<GameStart> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('메뉴'),
-      ),
-      body: Center(
-        child: RaisedButton(
-          child: Text('게임 시작'),
+        title: Text('게임 방법',
+          style: TextStyle(
+              color: Colors.white,
+              letterSpacing: 2.0,
+              fontSize: 26.0,
+              fontFamily: 'Cafe24SsurroundAir',
+              fontWeight: FontWeight.bold),),
+        centerTitle: true,
+        elevation: 0.0,
+        leading: IconButton(
+          padding: EdgeInsets.only(top: 5, left: 10),
+          color: Colors.white,
+          icon: Icon(Icons.arrow_back_ios, size: 40),
           onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MyMainView(
-                  title: 'Head-based Pointing NoonSong Game',
-                  image: image,),
-                )
-            );
+            Navigator.pop(context);
           },
         ),
+      ),
+      backgroundColor: Color.fromRGBO(13, 45, 132, 1),
+      body: Center(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                '원을 움직여 눈송이를 맞춰라!',
+                style: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: 2.0,
+                    fontSize: 26.0,
+                    fontFamily: 'Cafe24SsurroundAir',
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 30),
+              SizedBox(
+                  height: 400,
+                  width: 400,
+                  child: Image.asset('assets/game.gif')),
+              SizedBox(height: 30),
+              Text(
+                '얼굴 방향에 따라 원이 움직여요',
+                style: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: 2.0,
+                    fontSize: 26.0,
+                    fontFamily: 'Cafe24SsurroundAir',
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 43),
+              SizedBox(
+                width: 300.0,
+                //height: 40,
+                child: new RaisedButton(
+                  child: Text(
+                    '게임 시작',
+                    style: TextStyle(
+                        color: Colors.white,
+                        letterSpacing: 1.0,
+                        fontSize: 19.0,
+                        fontFamily: 'Cafe24SsurroundAir',
+                        fontWeight: FontWeight.bold),
+                  ),
+                  color: Colors.green,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MyMainView(
+                            title: 'Head-based Pointing NoonSong Game',
+                            image: image,
+                          ),
+                        ));
+                  },
+                ),
+              ),
+              SizedBox(height: 62),
+            ]),
       ),
     );
   }
@@ -105,18 +163,21 @@ class MyMainViewState extends State<MyMainView> {
     super.initState();
     Screen.keepOn(true);
     _cameraHandler = CameraHandler(this);
-    _demoScreen = DemoScreen(_cameraHandler, image ,context: context);
+    _demoScreen = DemoScreen(_cameraHandler, image, context: context);
 //    setTaskScreenConfiguration();
   }
 
   AppBar getAppBar() {
     return AppBar(
-      title: Text("얼굴  인식  눈송이  맞추기  게임",
+      title: Text(
+        "눈송 게임",
         style: TextStyle(
             color: Colors.white,
-            fontSize: 19.0,
-            fontFamily: "WandocleanseaR"
-        ),),
+            letterSpacing: 2.0,
+            fontSize: 26.0,
+            fontFamily: 'Cafe24SsurroundAir',
+            fontWeight: FontWeight.bold),
+      ),
       centerTitle: true,
     );
   }
@@ -132,10 +193,11 @@ class MyMainViewState extends State<MyMainView> {
       Icons.flip_camera_ios,
       color: Color.fromRGBO(13, 45, 132, 1),
     );
-    if (_cameraHandler.isBackCamera()) icon = const Icon(
-      Icons.flip_camera_ios,
-      color: Color.fromRGBO(13, 45, 132, 1),
-    );
+    if (_cameraHandler.isBackCamera())
+      icon = const Icon(
+        Icons.flip_camera_ios,
+        color: Color.fromRGBO(13, 45, 132, 1),
+      );
     return FloatingActionButton(
       onPressed: _cameraHandler.toggleCameraDirection,
       child: icon,
