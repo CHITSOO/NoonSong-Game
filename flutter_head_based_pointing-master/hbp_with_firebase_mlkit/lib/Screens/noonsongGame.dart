@@ -57,14 +57,14 @@ class _GameStartState extends State<GameStart> {
               fontWeight: FontWeight.bold),),
         centerTitle: true,
         elevation: 0.0,
-        leading: IconButton(
-          padding: EdgeInsets.only(top: 5, left: 10),
-          color: Colors.white,
-          icon: Icon(Icons.arrow_back_ios, size: 40),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        // leading: IconButton(
+        //   padding: EdgeInsets.only(top: 5, left: 10),
+        //   color: Colors.white,
+        //   icon: Icon(Icons.arrow_back_ios, size: 40),
+        //   onPressed: () {
+        //     Navigator.pop(context, true);
+        //   },
+        //),
       ),
       backgroundColor: Color.fromRGBO(13, 45, 132, 1),
       body: Center(
