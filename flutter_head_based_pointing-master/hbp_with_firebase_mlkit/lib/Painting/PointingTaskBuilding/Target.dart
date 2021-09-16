@@ -103,7 +103,24 @@ class Target {
     }
   }
 
-  void draw(Canvas canvas, pointer, {pointerRadius}) {
+  void draw(Canvas canvas, pointer, {pointerRadius, success = false}) {
+    // final paragraphStyle = new ui.ParagraphStyle(
+    //   fontSize: 60.0,
+    //   textAlign: TextAlign.center,
+    // );
+    final ui.ParagraphBuilder paragraphBuilder = ui.ParagraphBuilder(
+        ui.ParagraphStyle(
+          fontSize: 80.0,
+          fontFamily: 'Cafe24SsurroundAir',
+          fontWeight: FontWeight.bold,
+          textAlign:TextAlign.center,
+        )
+    )
+    //..pushStyle(Style.getTextStyle())
+      ..addText("Success!");
+    final ui.Paragraph paragraph = paragraphBuilder.build()
+      ..layout(ui.ParagraphConstraints(width: 380));
+
     _updateState(pointer);
     if (this.pressed)
       _style.imageFilter = ui.ImageFilter.blur(sigmaX: .0, sigmaY: .0);
@@ -115,7 +132,10 @@ class Target {
       canvas.drawRect(_shape, _style);
     else if (_targetShape == TargetShape.CircleTarget)
       canvas.drawCircle(_shape[0], _shape[1], _style);
-    else if (_targetShape == TargetShape.NoonSongTarget)
+    else if (_targetShape == TargetShape.NoonSongTarget) {
       canvas.drawImage(_shape, center, _style);
+      if(success == true)
+        canvas.drawParagraph(paragraph, Offset(15, 300));
+    }
   }
 }

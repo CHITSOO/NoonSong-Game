@@ -7,6 +7,8 @@ import 'dart:math';
 class JeffTaskBuilder extends PointingTaskBuilder {
   var _jeffTaskWidth = 80.0;
   var _jeffTaskEdge = 100.0;
+  var _firstFlag = 0;
+  var _success = false;
   final ui.Image image;
 
   // void _createJeffTask(double width,{double e = 100}) { // e: edge
@@ -20,7 +22,6 @@ class JeffTaskBuilder extends PointingTaskBuilder {
   void _createJeffTask(double width,{double e = 100}) { // e: edge
     var rng = new Random();
     Size size = canvasSize; // Size(420, 690); // manually detected size
-
     targets.add(Target.fromNoonSong(image,Offset(e, e)));
     targets.add(Target.fromNoonSong(image,Offset(size.width-e*2, -e/1.5)));
     targets.add(Target.fromNoonSong(image,Offset(-e/2, -e/2)));
@@ -38,7 +39,7 @@ class JeffTaskBuilder extends PointingTaskBuilder {
 
   void _drawJeffTargets(Canvas canvas) {
     for(var i = 0; i < targets.length; i++) {
-      targets[i].draw(canvas, pointer);
+      targets[i].draw(canvas, pointer, success:_success);
       if (targets[i].pressed)
         targets.removeAt(i);
     }
@@ -46,10 +47,16 @@ class JeffTaskBuilder extends PointingTaskBuilder {
 
   void _drawJeffTask(Canvas canvas) {
     if (targets.length <= 0) {
+      _firstFlag += 1;
       _jeffTaskEdge *= 0.75;
       _jeffTaskWidth *= 0.75;
+      _success = true;
       _createJeffTask(_jeffTaskWidth, e: _jeffTaskEdge);
     }
+    else if (_firstFlag >= 1 && targets.length <=7 && targets.length >=6)
+      _success = true;
+    else
+      _success = false;
     _drawJeffTargets(canvas);
   }
 
