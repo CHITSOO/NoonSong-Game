@@ -2,6 +2,7 @@
 "# flutter-head_based_pointing_to_noonsong_game" 
 
 <눈송 게임>
+
 간단한 설명 : 얼굴을 움직여 눈송이를 맞추는 게임! 눈동자의 방향에 따라 원이 움직인다. 그 원으로 눈송이를 조준하면 눈송이가 사라지는 게임! 눈송이를 전부 사라지게 하면 성공!
 
 개발 환경 및 개발 언어 : Android studio, flutter, dart
